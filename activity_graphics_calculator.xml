@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#E7C1E7">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Graphics Calculator"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/function_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter function (example: x*x)"
+        android:inputType="text"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/min_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Minimum x (example: -10)"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/max_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Maximum x (example: 10)"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <Button
+        android:id="@+id/draw_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E91E63"
+        android:text="Draw Graph" />
+
+    <com.example.myfirstapplication.GraphView
+        android:id="@+id/graph_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <Spinner
+        android:id="@+id/function_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/functions"
+        android:padding="10dp" />
+
+</LinearLayout>
